@@ -1,22 +1,24 @@
 <resources>
     <string name="app_name">HistoricalRecycler</string>
+
     <string-array name="historic_event_names">
         <item>Caída del Imperio Romano</item>
         <item>Primer ataque vikingo</item>
         <item>Coronación de Carlomagno</item>
         <item>Toma de Constantinopla</item>
-        <item>Invencion de la imprenta</item>
+        <item>Invención de la imprenta</item>
         <item>Llegada de los castellanos a América</item>
         <item>Inicio de la Guerra de los 30 años</item>
         <item>Fin de la dinastía Ming</item>
         <item>Paz de Westfalia</item>
         <item>Independencia de las 13 colonias</item>
-        <item>Revolucion francesa</item>
-        <item>Congreso de viena</item>
-        <item>Comuna de Pais</item>
-        <item>Revolucion Rusa</item>
+        <item>Revolución francesa</item>
+        <item>Congreso de Viena</item>
+        <item>Comuna de París</item>
+        <item>Revolución Rusa</item>
         <item>Atentado de las torres gemelas</item>
     </string-array>
+
     <string-array name="historic_event_dates">
         <item>476</item>
         <item>789</item>
@@ -34,6 +36,7 @@
         <item>1917</item>
         <item>2001</item>
     </string-array>
+
     <string-array name="historic_event_locations">
         <item>Italia</item>
         <item>Gran Bretaña</item>
@@ -47,8 +50,28 @@
         <item>América</item>
         <item>Francia</item>
         <item>Viena</item>
-        <item>Paris</item>
+        <item>París</item>
         <item>Rusia</item>
         <item>Estados Unidos</item>
     </string-array>
+
+    <!-- 1 SI ES VERDADERO, 0 SI ES FALSO -->
+    <integer-array name="historic_event_answers">
+        <item>1</item> <!-- La caída del Imperio Romano fue en el 476 (Verdadero) -->
+        <item>0</item> <!-- El primer ataque vikingo fue en 789 (Falso) -->
+        <item>1</item> <!-- Coronación de Carlomagno fue en 800 (Verdadero) -->
+        <item>1</item> <!-- La toma de Constantinopla fue en 1453 (Verdadero) -->
+        <item>1</item> <!-- Invención de la imprenta fue en 1453 (Verdadero) -->
+        <item>0</item> <!-- Llegada de los castellanos a América fue en 1492 (Falso) -->
+        <item>1</item> <!-- Inicio de la Guerra de los 30 años fue en 1618 (Verdadero) -->
+        <item>1</item> <!-- Fin de la dinastía Ming fue en 1644 (Verdadero) -->
+        <item>1</item> <!-- Paz de Westfalia fue en 1648 (Verdadero) -->
+        <item>0</item> <!-- Independencia de las 13 colonias fue en 1776 (Falso) -->
+        <item>1</item> <!-- Revolución francesa fue en 1789 (Verdadero) -->
+        <item>1</item> <!-- Congreso de Viena fue en 1814 (Verdadero) -->
+        <item>0</item> <!-- Comuna de París fue en 1871 (Falso) -->
+        <item>1</item> <!-- Revolución Rusa fue en 1917 (Verdadero) -->
+        <item>1</item> <!-- Atentado de las torres gemelas fue en 2001 (Verdadero) -->
+    </integer-array>
 </resources>
+

@@ -18,12 +18,13 @@ public class HistoricEventRVAdapter extends RecyclerView.Adapter<HistoricEventRV
 
     Context context;
     ArrayList<HistoricEventModel> historicEventsModel;
+    RespuestaCorrectaListener respuestaCorrectaListener;
 
-    public HistoricEventRVAdapter(Context context, ArrayList<HistoricEventModel> historicEventsModel) {
+    public HistoricEventRVAdapter(Context context, ArrayList<HistoricEventModel> historicEventsModel, RespuestaCorrectaListener respuestaCorrectaListener) {
         this.context = context;
         this.historicEventsModel = historicEventsModel;
+        this.respuestaCorrectaListener = respuestaCorrectaListener;
     }
-
 
     @NonNull
     @Override
@@ -38,6 +39,7 @@ public class HistoricEventRVAdapter extends RecyclerView.Adapter<HistoricEventRV
         String eventNames = historicEventsModel.get(position).getEventName();
         String eventDates = historicEventsModel.get(position).getEventDate();
         String eventLocations = historicEventsModel.get(position).getEventLocation();
+        boolean esVerdadero = historicEventsModel.get(position).esVerdadero();  // Obtener si el evento es verdadero
 
         holder.tvEventName.setText(eventNames);
         holder.tvEventDate.setText(eventDates);
@@ -49,26 +51,44 @@ public class HistoricEventRVAdapter extends RecyclerView.Adapter<HistoricEventRV
                 MaterialAlertDialogBuilder materialAlertDialogBuilder = new MaterialAlertDialogBuilder(context)
                         .setIcon(R.drawable.book_logo)
                         .setTitle(eventNames)
-                        .setMessage("Este evento sucedio en " + eventDates + " en " + eventLocations + " es correcto?")
-                        .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                        .setMessage("Este evento sucedió en " + eventDates + " en " + eventLocations + ". ¿Es correcto?")
+                        .setPositiveButton("Verdadero", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
+                                // Verificar si la respuesta es correcta
+                                if (esVerdadero) {
+                                    historicEventsModel.remove(position);
+                                    notifyItemRemoved(position);
+                                    notifyItemRangeChanged(position, historicEventsModel.size());
 
+                                    if (respuestaCorrectaListener != null) {
+                                        respuestaCorrectaListener.respuestaCorrecta();
+                                    }
+                                } else {
+                                    respuestaCorrectaListener.respuestaIncorrecta();
+                                }
                             }
                         })
-                        .setNegativeButton("Incorrecto", new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Falso", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
+                                if (!esVerdadero) {
+                                    historicEventsModel.remove(position);
+                                    notifyItemRemoved(position);
+                                    notifyItemRangeChanged(position, historicEventsModel.size());
 
+                                    if (respuestaCorrectaListener != null) {
+                                        respuestaCorrectaListener.respuestaCorrecta();
+                                    }
+                                } else {
+                                    respuestaCorrectaListener.respuestaIncorrecta();
+                                }
                             }
                         });
                 materialAlertDialogBuilder.show();
             }
         });
     }
-
-
-
 
     @Override
     public int getItemCount() {
@@ -78,7 +98,6 @@ public class HistoricEventRVAdapter extends RecyclerView.Adapter<HistoricEventRV
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView tvEventName, tvEventDate, tvEventLocation;
-
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
