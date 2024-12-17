@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="16dp"
-            android:text=""
+            android:text="Tiempo: 00:00"
             android:textColor="@color/design_default_color_error"
             android:textSize="18sp"/>
 

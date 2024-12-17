@@ -61,17 +61,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setHitoricEvents() {
-        // Obtener los arreglos de los recursos
         String[] eventNames = getResources().getStringArray(R.array.historic_event_names);
         String[] eventDates = getResources().getStringArray(R.array.historic_event_dates);
         String[] eventLocations = getResources().getStringArray(R.array.historic_event_locations);
-        int[] eventAnswers = getResources().getIntArray(R.array.historic_event_answers); // Cambio aquí: obtener arreglo de enteros
+        String[] eventQuestions = getResources().getStringArray(R.array.historic_event_questions);
+        String[] eventExplains = getResources().getStringArray(R.array.historic_event_explain);
+        int[] eventAnswers = getResources().getIntArray(R.array.historic_event_answers);
 
-        // Crear los eventos históricos y agregar al ArrayList
+
         for (int i = 0; i < eventNames.length; i++) {
-            // Convertir el valor de 1 a true y 0 a false
             boolean esVerdadero = (eventAnswers[i] == 1);
-            historicEvents.add(new HistoricEventModel(eventNames[i], eventDates[i], eventLocations[i], esVerdadero));
+            historicEvents.add(new HistoricEventModel(eventNames[i], eventDates[i], eventLocations[i], eventQuestions[i], eventExplains[i], esVerdadero));
         }
     }
 

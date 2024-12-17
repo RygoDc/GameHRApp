@@ -1,77 +1,112 @@
 <resources>
-    <string name="app_name">HistoricalRecycler</string>
+    <string name="app_name">Real Madrid Historical Champions</string>
 
     <string-array name="historic_event_names">
-        <item>Caída del Imperio Romano</item>
-        <item>Primer ataque vikingo</item>
-        <item>Coronación de Carlomagno</item>
-        <item>Toma de Constantinopla</item>
-        <item>Invención de la imprenta</item>
-        <item>Llegada de los castellanos a América</item>
-        <item>Inicio de la Guerra de los 30 años</item>
-        <item>Fin de la dinastía Ming</item>
-        <item>Paz de Westfalia</item>
-        <item>Independencia de las 13 colonias</item>
-        <item>Revolución francesa</item>
-        <item>Congreso de Viena</item>
-        <item>Comuna de París</item>
-        <item>Revolución Rusa</item>
-        <item>Atentado de las torres gemelas</item>
+        <item>1ª Champions League</item>
+        <item>2ª Champions League</item>
+        <item>3ª Champions League</item>
+        <item>4ª Champions League</item>
+        <item>5ª Champions League</item>
+        <item>6ª Champions League</item>
+        <item>7ª Champions League</item>
+        <item>8ª Champions League</item>
+        <item>9ª Champions League</item>
+        <item>10ª Champions League</item>
+        <item>11ª Champions League</item>
+        <item>12ª Champions League</item>
+        <item>13ª Champions League</item>
+        <item>14ª Champions League</item>
+        <item>15ª Champions League</item>
     </string-array>
 
     <string-array name="historic_event_dates">
-        <item>476</item>
-        <item>789</item>
-        <item>800</item>
-        <item>1453</item>
-        <item>1453</item>
-        <item>1492</item>
-        <item>1618</item>
-        <item>1644</item>
-        <item>1648</item>
-        <item>1776</item>
-        <item>1789</item>
-        <item>1814</item>
-        <item>1871</item>
-        <item>1917</item>
-        <item>2001</item>
+        <item>1956</item>
+        <item>1957</item>
+        <item>1958</item>
+        <item>1959</item>
+        <item>1960</item>
+        <item>1966</item>
+        <item>1998</item>
+        <item>2000</item>
+        <item>2002</item>
+        <item>2014</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2022</item>
+        <item>2024</item>
     </string-array>
 
     <string-array name="historic_event_locations">
-        <item>Italia</item>
-        <item>Gran Bretaña</item>
-        <item>Aquisgran</item>
-        <item>Constantinopla</item>
-        <item>Sacro Imperio Romano Germánico</item>
-        <item>América</item>
-        <item>Europa</item>
-        <item>China</item>
-        <item>Europa</item>
-        <item>América</item>
-        <item>Francia</item>
-        <item>Viena</item>
-        <item>París</item>
-        <item>Rusia</item>
-        <item>Estados Unidos</item>
+        <item>París, Francia</item>
+        <item>Madrid, España</item>
+        <item>Bruselas, Bélgica</item>
+        <item>Stuttgart, Alemania</item>
+        <item>Glasgow, Escocia</item>
+        <item>Bruselas, Bélgica</item>
+        <item>Ámsterdam, Países Bajos</item>
+        <item>París, Francia</item>
+        <item>Glasgow, Escocia</item>
+        <item>Lisboa, Portugal</item>
+        <item>Milán, Italia</item>
+        <item>Cardiff, Gales</item>
+        <item>Kiev, Ucrania</item>
+        <item>París, Francia</item>
+        <item>Londres, Inglaterra</item>
     </string-array>
 
-    <!-- 1 SI ES VERDADERO, 0 SI ES FALSO -->
+    <string-array name="historic_event_questions">
+        <item>¿La 1ª Champions del Real Madrid se jugó contra el Stade de Reims?</item>
+        <item>¿El Real Madrid ganó su 2ª Champions League en el estadio de Wembley?</item>
+        <item>¿El Real Madrid necesitó una tanda de penales para ganar su 3ª Champions League?</item>
+        <item>¿El Real Madrid venció al Barcelona en la final de la 4ª Champions League?</item>
+        <item>¿El Real Madrid ganó la final de 1960 por 7-3 contra el Eintracht Frankfurt?</item>
+        <item>¿El equipo del Real Madrid que ganó la Champions de 1966 era conocido como Ye-Ye?</item>
+        <item>¿El Real Madrid rompió una sequía de 32 años sin Champions al ganar la 7ª en 1998?</item>
+        <item>¿La 8ª Champions League del Real Madrid en 2000 fue la primera final entre dos equipos de un mismo país?</item>
+        <item>¿El gol de Zidane en la final de 2002 fue de tiro libre directo?</item>
+        <item>¿El Real Madrid ganó la 10ª Champions con un gol de Sergio Ramos en el minuto 93?</item>
+        <item>¿La 11ª Champions del Real Madrid fue contra el Atlético de Madrid y se decidió en penales?</item>
+        <item>¿El Real Madrid ganó la 12ª Champions con un hat-trick de Cristiano Ronaldo?</item>
+        <item>¿El Real Madrid ganó la 13ª Champions League contra la Juventus?</item>
+        <item>¿El Real Madrid venció al Liverpool en la final de la 14ª Champions con una gran actuación de Courtois?</item>
+        <item>¿El Real Madrid ganó su 15ª Champions League en 2024 venciendo al Borussia Dortmund?</item>
+    </string-array>
+
+    <string-array name="historic_event_explain">
+        <item>La final de 1956 fue contra el Stade de Reims.</item> <!-- Verdadero -->
+        <item>La 2ª Champions no se jugó en Wembley, se jugó en el Santiago Bernabéu.</item> <!-- Falso -->
+        <item>La final de 1958 se ganó en la prórroga, no en penales.</item> <!-- Falso -->
+        <item>El Real Madrid venció al Stade de Reims, no al Barcelona.</item> <!-- Falso -->
+        <item>La final de 1960 se ganó 7-3 contra el Eintracht Frankfurt.</item> <!-- Verdadero -->
+        <item>El equipo que ganó en 1966 era apodado Ye-Ye, proviene del estribillo de su famosa canción "She Loves You" ("Yeah, yeah, yeah").</item> <!-- Verdadero -->
+        <item>La 7ª Champions rompió una sequía de 32 años sin títulos.</item> <!-- Verdadero -->
+        <item>La final de 2000 fue la primera entre dos equipos del mismo país.</item> <!-- Verdadero -->
+        <item>El gol de Zidane fue una volea, no un tiro libre.</item> <!-- Falso -->
+        <item>Sergio Ramos empató la final en el minuto 93.</item> <!-- Verdadero -->
+        <item>La 11ª Champions se decidió en penales contra el Atlético.</item> <!-- Verdadero -->
+        <item>Cristiano no hizo hat-trick en la final de la 12ª Champions.</item> <!-- Falso -->
+        <item>La 13ª Champions se ganó contra el Liverpool, no la Juventus.</item> <!-- Falso -->
+        <item>Courtois fue clave en la final de la 14ª Champions contra el Liverpool.</item> <!-- Verdadero -->
+        <item>El Real Madrid venció al Borussia Dortmund para ganar la 15ª Champions.</item> <!-- Verdadero -->
+    </string-array>
+
     <integer-array name="historic_event_answers">
-        <item>1</item> <!-- La caída del Imperio Romano fue en el 476 (Verdadero) -->
-        <item>0</item> <!-- El primer ataque vikingo fue en 789 (Falso) -->
-        <item>1</item> <!-- Coronación de Carlomagno fue en 800 (Verdadero) -->
-        <item>1</item> <!-- La toma de Constantinopla fue en 1453 (Verdadero) -->
-        <item>1</item> <!-- Invención de la imprenta fue en 1453 (Verdadero) -->
-        <item>0</item> <!-- Llegada de los castellanos a América fue en 1492 (Falso) -->
-        <item>1</item> <!-- Inicio de la Guerra de los 30 años fue en 1618 (Verdadero) -->
-        <item>1</item> <!-- Fin de la dinastía Ming fue en 1644 (Verdadero) -->
-        <item>1</item> <!-- Paz de Westfalia fue en 1648 (Verdadero) -->
-        <item>0</item> <!-- Independencia de las 13 colonias fue en 1776 (Falso) -->
-        <item>1</item> <!-- Revolución francesa fue en 1789 (Verdadero) -->
-        <item>1</item> <!-- Congreso de Viena fue en 1814 (Verdadero) -->
-        <item>0</item> <!-- Comuna de París fue en 1871 (Falso) -->
-        <item>1</item> <!-- Revolución Rusa fue en 1917 (Verdadero) -->
-        <item>1</item> <!-- Atentado de las torres gemelas fue en 2001 (Verdadero) -->
+        <item>1</item> <!-- Verdadero: La final de 1956 fue contra el Stade de Reims -->
+        <item>0</item> <!-- Falso: La 2ª Champions no se jugó en Wembley, se jugó en el Santiago Bernabéu -->
+        <item>0</item> <!-- Falso: La final de 1958 se ganó en la prórroga, no en penales -->
+        <item>0</item> <!-- Falso: El Real Madrid venció al Stade de Reims, no al Barcelona -->
+        <item>1</item> <!-- Verdadero: La final de 1960 se ganó 7-3 contra el Eintracht Frankfurt -->
+        <item>1</item> <!-- Verdadero: El equipo que ganó en 1966 era apodado 'Ye-Ye' -->
+        <item>1</item> <!-- Verdadero: La 7ª Champions rompió una sequía de 32 años sin títulos -->
+        <item>1</item> <!-- Verdadero: La final de 2000 fue la primera entre dos equipos del mismo país -->
+        <item>0</item> <!-- Falso: El gol de Zidane fue una volea, no un tiro libre -->
+        <item>1</item> <!-- Verdadero: Sergio Ramos empató la final en el minuto 93 -->
+        <item>1</item> <!-- Verdadero: La 11ª Champions se decidió en penales contra el Atlético -->
+        <item>0</item> <!-- Falso: Cristiano no hizo hat-trick en la final de la 12ª Champions -->
+        <item>0</item> <!-- Falso: La 13ª Champions se ganó contra el Liverpool, no la Juventus -->
+        <item>1</item> <!-- Verdadero: Courtois fue clave en la final de la 14ª Champions contra el Liverpool -->
+        <item>1</item> <!-- Verdadero: El Real Madrid venció al Borussia Dortmund para ganar la 15ª Champions -->
     </integer-array>
 </resources>
 

@@ -5,13 +5,17 @@ public class HistoricEventModel {
     public String eventName;
     public String eventDate;
     public String eventLocation;
-    public boolean esVerdadero;  // Cambiado a tipo boolean
+    public String eventQuestion;
+    public String eventExplain;
+    public boolean esVerdadero;
 
-    // Constructor modificado para aceptar un booleano
-    public HistoricEventModel(String eventName, String eventDate, String eventLocation, boolean esVerdadero) {
+
+    public HistoricEventModel(String eventName, String eventDate, String eventLocation, String eventQuestion, String eventExplain, boolean esVerdadero) {
         this.eventName = eventName;
         this.eventDate = eventDate;
         this.eventLocation = eventLocation;
+        this.eventQuestion = eventQuestion;
+        this.eventExplain = eventExplain;
         this.esVerdadero = esVerdadero;
     }
 
@@ -25,6 +29,13 @@ public class HistoricEventModel {
 
     public String getEventLocation() {
         return eventLocation;
+    }
+
+    public String getEventQuestion() {
+        return eventQuestion;
+    }
+    public String getEventExplain() {
+        return eventExplain;
     }
 
     public boolean esVerdadero() {

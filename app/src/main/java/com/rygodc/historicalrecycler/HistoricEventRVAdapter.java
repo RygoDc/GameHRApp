@@ -6,11 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.snackbar.Snackbar;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -39,7 +43,9 @@ public class HistoricEventRVAdapter extends RecyclerView.Adapter<HistoricEventRV
         String eventNames = historicEventsModel.get(position).getEventName();
         String eventDates = historicEventsModel.get(position).getEventDate();
         String eventLocations = historicEventsModel.get(position).getEventLocation();
-        boolean esVerdadero = historicEventsModel.get(position).esVerdadero();  // Obtener si el evento es verdadero
+        String eventQuestions = historicEventsModel.get(position).getEventQuestion();
+        String eventExplain = historicEventsModel.get(position).getEventExplain();
+        boolean esVerdadero = historicEventsModel.get(position).esVerdadero();
 
         holder.tvEventName.setText(eventNames);
         holder.tvEventDate.setText(eventDates);
@@ -51,12 +57,17 @@ public class HistoricEventRVAdapter extends RecyclerView.Adapter<HistoricEventRV
                 MaterialAlertDialogBuilder materialAlertDialogBuilder = new MaterialAlertDialogBuilder(context)
                         .setIcon(R.drawable.book_logo)
                         .setTitle(eventNames)
-                        .setMessage("Este evento sucedió en " + eventDates + " en " + eventLocations + ". ¿Es correcto?")
+                        .setMessage(" " + eventQuestions + ". ¿Es correcto?")
                         .setPositiveButton("Verdadero", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                // Verificar si la respuesta es correcta
                                 if (esVerdadero) {
+                                    Snackbar snackbar = Snackbar.make(view, eventExplain, Snackbar.LENGTH_LONG);
+                                    View snackbarView = snackbar.getView();
+                                    TextView textView = snackbarView.findViewById(com.google.android.material.R.id.snackbar_text);
+                                    textView.setMaxLines(Integer.MAX_VALUE);
+                                    textView.setEllipsize(null);
+                                    snackbar.show();
                                     historicEventsModel.remove(position);
                                     notifyItemRemoved(position);
                                     notifyItemRangeChanged(position, historicEventsModel.size());
@@ -73,6 +84,12 @@ public class HistoricEventRVAdapter extends RecyclerView.Adapter<HistoricEventRV
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 if (!esVerdadero) {
+                                    Snackbar snackbar = Snackbar.make(view, eventExplain, Snackbar.LENGTH_LONG);
+                                    View snackbarView = snackbar.getView();
+                                    TextView textView = snackbarView.findViewById(com.google.android.material.R.id.snackbar_text);
+                                    textView.setMaxLines(Integer.MAX_VALUE);
+                                    textView.setEllipsize(null);
+                                    snackbar.show();
                                     historicEventsModel.remove(position);
                                     notifyItemRemoved(position);
                                     notifyItemRangeChanged(position, historicEventsModel.size());
